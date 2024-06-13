@@ -31,12 +31,11 @@
   /* 533px or smaller apply these styles */
   @media only screen and (max-width: 554px) {
     .section-wrap {
-      padding-top: 40px !important;
       padding-right: 20px !important;
       padding-left: 20px !important;
     }
 
-    .stack-column {
+    .stack-header {
       width: 100% !important;
       text-align: center !important;
     }
@@ -46,11 +45,26 @@
       padding-top: 10px !important;
       text-align: center !important;
     }
+
+    .stack-column {
+      width: 100% !important;
+    }
+
+    .column--right {
+      padding-top: 25px !important;
+    }
   }
 
-  /* 500px or smaller apply these styles */
-  @media only screen and (max-width: 500px) {
-    
+  /* 425px or smaller apply these styles */
+  @media only screen and (max-width: 425px) {
+    .header__logo {
+      width: 200px !important;
+    }
+  
+    .header__top  {
+      padding-right: 64px !important;
+      font-size: 9px !important;
+    }
   }
 
   </style>
@@ -90,15 +104,15 @@
                   role="presentation">
                     <tr>
                       <td align="center">
-                        <span style="font-size: 11px; font-family: Arial, Helvetica, sans-serif; padding-right: 84px; padding-top: 5px; padding-left: 0px; padding-bottom: 0px;">
+                        <span style="font-size: 11px; font-family: Arial, Helvetica, sans-serif; padding-right: 84px; padding-top: 5px; padding-left: 0px; padding-bottom: 0px;" class="header__top">
                           ActiveCampaign
-                          <img src="img/icons8-double-right-24.png" alt="arrow icon" width="8">
+                          <img src="img/icons8-double-right-24.png" alt="arrow icon" width="8" class="arrow-img">
                         </span>
                       </td>
                     </tr>
                     <tr>
                       <td align="center">
-                        <img src="img/postmark_logo.png" alt="postmark logo" width="250" style="padding-top: 5px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px;">
+                        <img src="img/postmark_logo.png" alt="postmark logo" width="250" style="padding-top: 5px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; color: #3B4049;" class="header__logo">
                       </td>
                     </tr>
                   </table>
@@ -125,7 +139,7 @@
                         cellpadding="0"
                         cellspacing="0"
                         role="presentation"
-                        class="stack-column">
+                        class="stack-header">
                           <tr>
                             <td align="center">
                               <img src="img/icons8-heart-48.png" alt="heart icon" width="28">
@@ -139,7 +153,7 @@
                         cellpadding="0"
                         cellspacing="0"
                         role="presentation"
-                        class="stack-column">
+                        class="stack-header">
                           <tr>
                             <td align="center">
                               <h1 style="font-size: 26px; font-family: Arial, Helvetica, sans-serif; margin: 0; text-align: left; padding-left: 20px;" class="headline-1">
@@ -167,10 +181,10 @@
                   role="presentation">
                     <tr>
                       <td align="left">
-                        <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0;">
+                        <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049;">
                           We've successfully charged your credit card for $10.00. The charge will appear on your statement as ActiveCampaign, LLC. This includes the monthly cost for your 10,000 email per month, as well as any extra emails you incurred during the last billing period
                         </p>
-                        <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding-top: 30px; padding-right: 0; padding-bottom: 0px; padding-left: 0px; margin: 0;">
+                        <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding-top: 30px; padding-right: 0; padding-bottom: 0px; padding-left: 0px; margin: 0; color: #3B4049;">
                           Your account used <strong>4660</strong> emails this billing period.
                         </p>
                       </td>
@@ -192,16 +206,18 @@
                   role="presentation">
                     <tr>
                       <td>
+                        <!-- col 1 -->
                         <table
                         width="50%"
                         align="left"
                         border="0"
                         cellpadding="0"
                         cellspacing="0"
-                        role="presentation">
+                        role="presentation"
+                        class="stack-column">
                           <tr>
                             <td>
-                              <p>
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0;">
                                 Active Campaign, LLC<br>
                                 1 North Dearborn St, 5th Floor<br>
                                 Chicago, IL 60602
@@ -209,25 +225,539 @@
                             </td>
                           </tr>
                         </table>
+                        <!-- /col 1 -->
+                        <!-- col 2 -->
                         <table
                         width="50%"
                         align="right"
                         border="0"
                         cellpadding="0"
                         cellspacing="0"
-                        role="presentation">
+                        role="presentation"
+                        class="stack-column column--right">
                           <tr>
                             <td>
-
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0;">
+                                <strong>Receipt #8930287</strong><br>
+                                Invoice date: June 14, 2023<br>
+                                Payment received: June 14, 2023
+                              </p>
                             </td>
                           </tr>
                         </table>
+                        <!-- /col 2 -->
                       </td>
                     </tr>
                   </table>
                 </td>
               </tr>
               <!--- END: address and receipt row --->
+
+              <!--- START: bill and address row --->
+              <tr>
+                <td style="padding-top: 0px; padding-right: 50px; padding-bottom: 25px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td>
+                        <!-- col 1 -->
+                        <table
+                        width="50%"
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="stack-column">
+                          <tr>
+                            <td>
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049;">
+                                <strong>Bill to</strong> <a href="#" style="color: #A9A9A9;">Edit</a><br>
+                                Dept<br>
+                                **** **********
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 1 -->
+                        <!-- col 2 -->
+                        <table
+                        width="50%"
+                        align="right"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="stack-column column--right">
+                          <tr>
+                            <td>
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049;">
+                                <strong>Bill Address</strong><br>
+                                *****<br>
+                                ********, ****<br>
+                                IT
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 2 -->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: bill and address row --->
+
+              <!--- START: divider --->
+              <tr>
+                <td style="padding-top: 0px; padding-right: 50px; padding-bottom: 25px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="border-top: 2px solid #f2f2f2;">
+                  </table>
+                </td>
+              </tr>
+              <!--- END: divider --->
+
+              <!--- START: monthly plan row --->
+              <tr>
+                <td style="padding-top: 5px; padding-right: 50px; padding-bottom: 30px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td>
+                        <!-- col 1 -->
+                        <table
+                        width="50%"
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="">
+                          <tr>
+                            <td>
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #A9A9A9;">
+                                Monthly Plan (10,000 emails)
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 1 -->
+                        <!-- col 2 -->
+                        <table
+                        width="50%"
+                        align="right"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="">
+                          <tr>
+                            <td align="right">
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #A9A9A9;">
+                                $10.00
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 2 -->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: monthly plan row --->
+
+              <!--- START: divider --->
+              <tr>
+                <td style="padding-top: 0px; padding-right: 50px; padding-bottom: 25px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="border-top: 2px solid #f2f2f2;">
+                  </table>
+                </td>
+              </tr>
+              <!--- END: divider --->
+
+              <!--- START: extra emails row --->
+              <tr>
+                <td style="padding-top: 5px; padding-right: 50px; padding-bottom: 30px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td>
+                        <!-- col 1 -->
+                        <table
+                        width="50%"
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="">
+                          <tr>
+                            <td>
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #A9A9A9;">
+                                Extra emails (0)
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 1 -->
+                        <!-- col 2 -->
+                        <table
+                        width="50%"
+                        align="right"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="">
+                          <tr>
+                            <td align="right">
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #A9A9A9;">
+                                $0.00
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 2 -->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: extra emails row --->
+
+              <!--- START: divider --->
+              <tr>
+                <td style="padding-top: 0px; padding-right: 50px; padding-bottom: 25px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="border-top: 2px solid #f2f2f2;">
+                  </table>
+                </td>
+              </tr>
+              <!--- END: divider --->
+
+              <!--- START: totals row --->
+              <tr>
+                <td style="padding-top: 5px; padding-right: 50px; padding-bottom: 30px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td>
+                        <!-- col 1 -->
+                        <table
+                        width="50%"
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="">
+                          <tr>
+                            <td>
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049;">
+                                Total
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 1 -->
+                        <!-- col 2 -->
+                        <table
+                        width="50%"
+                        align="right"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="">
+                          <tr>
+                            <td align="right">
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049;">
+                                $10.00
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 2 -->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: totals row --->
+
+              <!--- START: divider --->
+              <tr>
+                <td style="padding-top: 0px; padding-right: 50px; padding-bottom: 25px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="border-top: 2px solid #f2f2f2;">
+                  </table>
+                </td>
+              </tr>
+              <!--- END: divider --->
+
+              <!--- START: amount row --->
+              <tr>
+                <td style="padding-top: 5px; padding-right: 50px; padding-bottom: 30px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td>
+                        <!-- col 1 -->
+                        <table
+                        width="50%"
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="">
+                          <tr>
+                            <td>
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049;">
+                                Amount Paid with Visa<br>
+                                (ending in ****)
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 1 -->
+                        <!-- col 2 -->
+                        <table
+                        width="50%"
+                        align="right"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation"
+                        class="">
+                          <tr>
+                            <td align="right">
+                              <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049;">
+                                $10.00
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- /col 2 -->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: amount row --->
+
+              <!--- START: divider --->
+              <tr>
+                <td style="padding-top: 0px; padding-right: 50px; padding-bottom: 25px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                  style="border-top: 2px solid #f2f2f2;">
+                  </table>
+                </td>
+              </tr>
+              <!--- END: divider --->
+
+              <!--- START: bottom content row --->
+              <tr>
+                <td style="padding-top: 5px; padding-right: 50px; padding-bottom: 30px; padding-left: 50px; background-color: #FFFFFF;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td align="left">
+                        <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049;">
+                          You can also view a history of your receipts by <a href="#" style="color: #0C9AF2;">logging into your Postmark account.</a> If you have any questions, feel free to reply to this email.
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: bottom content row --->
+
+              <!--- START: email info row --->
+              <tr>
+                <td style="padding-top: 25px; padding-right: 50px; padding-bottom: 30px; padding-left: 50px; background-color: #F6F4F9;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td align="center">
+                        <span>
+                          <img src="img/icons8-mail-50.png" alt="mail icon" width="28">
+                        </span>
+                        <h2 style="font-size: 16px; font-family: Arial, Helvetica, sans-serif; font-weight: 600; color: #6A618C; line-height: 1.6; text-transform: capitalize;">
+                          Protect Your Brand From Email Scammers
+                        </h2>
+                        <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 500; color: #6A618C; line-height: 1.6; text-transform: capitalize;padding: 0 20 20px; margin: 0;">
+                          Monitor who's sending email using your docmins and protect your brand from spoofing and phishing attacks with DMARC Digests.
+                        </p>
+                        
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <!-- button -->
+                        <table
+                        width=""
+                        align="center"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        role="presentation">
+                          <tr>
+                            <td>
+                              <a href="#" style="background-color: #60BB8E; border-radius: 4px; text-decoration: none;" >
+                                <span style="border: 1px solid #60BB8E; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none; padding: 10px 16px; display: block; border-radius: 4px; text-align: center; color: #ffffff; background-color: #60BB8E;">
+                                  Try it free for 14 days
+                                </span>
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                        <!-- button -->
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: email info row --->
+
+              <!--- START: social links row --->
+              <tr>
+                <td style="padding-top: 30px; padding-right: 50px; padding-bottom: 30px; padding-left: 50px; background-color: #FBDE02;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td align="center">
+                        <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #3B4049; text-align: center;">
+                          Follow us on
+                          <a href="#"><img src="img/icons8-twitter-30.png" alt="Twitter icon" style="vertical-align: middle;"></a>
+                          and
+                          <a href="#"><img src="img/icons8-linked-in-30.png" alt="Linkedin icon" style="vertical-align: middle;"></a>
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: social links row --->
+
+              <!--- START: newsletter row --->
+              <tr>
+                <td style="padding-top: 20px; padding-right: 50px; padding-bottom: 20px; padding-left: 50px; background-color: #252526;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td align="center">
+                        <p style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #FFFFFF; background-color: #252526;">
+                          <a href="#" style="color: #ffffff;">
+                            Subscribe to the Postmark newsletter
+                          </a>
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: newsletter row --->
+
+              <!--- START: company address row --->
+              <tr>
+                <td style="padding-top: 10px; padding-right: 50px; padding-bottom: 10px; padding-left: 50px;" class="section-wrap">
+                  <table
+                  width="100%"
+                  align="center"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation">
+                    <tr>
+                      <td align="center">
+                        <p style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; font-weight: 300; line-height: 1.6; padding: 0; margin: 0; color: #C8C3B0;">
+                          ActiveCampaign LLC, 1 North Dearborn St, 5th Floor, Chicago, IL 60602
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!--- END: company address row --->
 
             </table>
           </td>
